@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="src/icons/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>STIHL</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="main">
+        <div class="logo">
+          <img class="logo__img" src="src/icons/logo.svg" alt="STIHL" />
+        </div>
+        <div class="main__wrapper">
+          <h1 class="main__header">Возьми STIHL – почувствуй мощь!</h1>
+          <div class="main__text">
+            <p>
+              Единственное условие – регистрация продукта, которая займет меньше
+              минуты и будет сделана прямо в магазине в момент Вашей покупки!
+            </p>
+          </div>
+          <button class="main__btn">УЗНАТЬ БОЛЬШЕ</button>
+        </div>
+      </div>
+      <div class="promo">
+        <div class="promo__title">
+          <p>Мотокосы</p>
+        </div>
+        <transition-group name="fade" tag="div" class="promo__img">
+          <div v-for="i in [currentIndex]" :key="i">
+            <img :src="currentImg" />
+          </div>
+        </transition-group>
+        <div class="slider">
+          <div class="slider__control">
+            <a class="prev" @click="prev" href="#">&#10094; Prev</a>
+            <a class="next" @click="next" href="#">&#10095; Next</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
